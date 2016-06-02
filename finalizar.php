@@ -6,14 +6,14 @@
 <?php get_header(); ?>
 <div class="finalizar-compra-formulario">
   <div class="container-fluid finalizar-ped">
-  <div class="container text-center">
+  <div class="container text-center"  id="goform">
   <h2>Finalizar pedido</h2>
-  <div class="col-md-8 col-md-offset-2">
+  <div class="col-md-6 col-md-offset-3">
 
     <form action="<?php bloginfo('template_url'); ?>/enviar.php" method="POST" name="userForm">
       <div class="form-group box-nome-email" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
         <!--  <label></label> -->
-        <input class="form-control" type="text" name="name" id="nome"placeholder="* Nome" ng-model="user.name" required>
+        <input class="form-control" type="text" name="name" id="nome"placeholder="* Nome" ng-model="user.name" required autofocus>
       </div>
       <div class="form-group box-nome-email">
         <!--   <label></label> -->
@@ -33,9 +33,7 @@
         </p>
         <p>
           <input class="form-control" type="text" id="cidade" placeholder="Cidade">
-         <br>
-          <input class="form-control" type="text" id="estado" placeholder="Estado">
-        </p>
+       </p>
       </div>
       <div class="textarea">
         <p><textarea class="form-control" value"Observações" id="comments"  placeholder="Observações"></textarea></p>
@@ -48,7 +46,7 @@
       <div class="enviar-cancelar">
         <a href="javascript:;" class="simpleCart_empty">Cancelar</a>
 
-        <a href="javascript:;"class="simpleCart_checkout btn btn-success" id="bt-enviar" ng-disabled="userForm.$invalid">Confirmar</a>
+        <a href="javascript:;" class="simpleCart_checkout btn btn-success" id="bt-enviar" ng-disabled="userForm.$invalid">Confirmar</a>
       </div>
     </form>
   </div>

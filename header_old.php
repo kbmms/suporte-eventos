@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/owl.carousel.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <?php wp_head(); ?>
 </head>
 <body>
@@ -29,12 +28,12 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
-          <li><a href="http://suporteventos.com.br">Home</a></li>
-          <li><a href="http://suporteventos.com.br/a-empresa">A Empresa</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">A Empresa</a></li>
           <div class="hidden-xs img-topo-logo-centro"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-topo.png" height="240" width="257" alt=""></div>
           <li class="imagem-logo-topo hidden-xs"></li>
-          <li><a href="http://suporteventos.com.br/acessorios">Produtos</a></li>
-          <li><a href="http://suporteventos.com.br/contato#contato-go">Contato</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#">Contato</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </nav>
@@ -44,27 +43,27 @@
 </header>
 <div class="slider-box">
 
-    <div class="owl-carousel" id="wrapper">
-      <?php
-      query_posts('post_type=slider&order=ASC&showposts=-1');
-      if (have_posts()) : while (have_posts()): the_post();
-      ?>
-      <div class="item">
-          <div class="text-slider">
-              <h4><?php the_title(); ?></h4>
-          </div>
-          <img src="<?php the_field('imagem_do_slider'); ?>" alt="">
+        <div class="owl-carousel">
+    <div class="item">
+        <div class="text-slider">
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+        </div>
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Mesa-espelhada121.jpg" alt="">
 
-      </div>
-<?php  endwhile;  endif;   wp_reset_query(); ?>
+    </div>
+    <div class="item">
+        <div class="text-slider">
+            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+        </div>
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/Mesa-espelhada121.jpg" alt="">
+    </div>
     </div>
 </div>
 
 
-<div class="row bg-search-form">
-    <div class="dropdown-search-box container">
-      <div class="col-md-8 col-md-offset-2">
-        <div class="dropdown col-md-6 col-md-offset-0 col-sm-2 col-sm-offset-5 col-xs-12 col-xs-offset-0">
+<div class="row">
+    <div class="dropdown-search-box container-fluid">
+        <div class="dropdown col-md-3 col-md-offset-3 col-sm-2 col-sm-offset-5 col-xs-12 col-xs-offset-0">
         <span class="busca-por-produto">Buscar por produto</span>
           <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             Todas as Categorias
@@ -72,19 +71,14 @@
           </button>
 
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="http://suporteventos.com.br/acessorios/">Acessórios</a></li>
-            <li><a href="http://suporteventos.com.br/bares">Bares</a></li>
-            <li><a href="http://suporteventos.com.br/cadeiras/">Cadeiras</a></li>
-<!--           <li><a href="http://suporteventos.com.br/sousplats-e-toalha">Sousplats e Toalha</a></li>-->
-           <li><a href="http://suporteventos.com.br/lounges">Lounge</a></li>
-           <li><a href="http://suporteventos.com.br/mesas-e-aparadores">Mesas e Aparadores</a></li>
-           <li><a href="http://suporteventos.com.br/kids">Kids</a></li>
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
           </ul>
         </div>
-        <?php get_search_form(); ?>
-      </div>
 
-<!--
         <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-4 col-md-5 col-md-offset-0  form-search">
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
@@ -93,7 +87,6 @@
           <button type="submit" class="btn btn-default">Submit</button>
         </form>
         </div>
--->
 
     </div>
 </div>

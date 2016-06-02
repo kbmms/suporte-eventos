@@ -18,11 +18,8 @@
                         </div>
                 </div>
 
-                <div class="container finalizar-pedido text-center">
-                  <div class="col-md-6 col-md-offset-3">
-                    <p><a href="<?php echo site_url() ?>/finalizar#goform">Finalizar o pedido</a></p>
-                  </div>
-
+                <div class="finalizar-pedido text-center">
+                    <p><a href="<?php echo site_url() ?>/finalizar">Finalizar o pedido</a></p>
 
                 </div>
 </div>

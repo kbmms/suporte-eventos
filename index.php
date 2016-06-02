@@ -28,12 +28,12 @@
                     $do_not_duplicate = $post->ID;?>
 
                             <a href="<?php the_permalink(); ?> ">
-                                <div class="col-md-4 col-sm-6 col-xs-12 col-md-offset-1 box-mini-produtos">
-                                    <div class="prod-main-img col-md-12 col-xs-12">
+                                <div class="col-md-4 col-sm-12 col-sm-offset-0 col-xs-12 col-md-offset-1 box-mini-produtos">
+                                    <div class="prod-main-img col-md-12 col-xs-12 col-sm-12">
                                         <img class="img-responsive" src="<?php the_field('imagem_da_home'); ?>" alt="<?php the_title(); ?> ">
                                     </div>
                                     <div class="prod-main-link text-center">
-                                      <p><span><?php the_title(); ?></span></p>
+                                      <p><span class="effect2"><?php the_title(); ?></span></p>
                                     </div>
                                 </div>
                             </a>
@@ -123,5 +123,10 @@
 
         </div>
     </div>
+</div>
+<div class="btn-fazer-pedido">
+    <a href="http://suporteventos.com.br/acessorios">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/comprar1.png" height="100" width="130" alt="">
+    </a>
 </div>
 <?php get_footer(); ?>

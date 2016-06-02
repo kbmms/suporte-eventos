@@ -7,7 +7,17 @@ Description: Site da empresa suporte eventos
 Version 2.0
 */
 
+.btn-fazer-pedido {
 
+    bottom:0;
+    right: 12px;
+    position: fixed;
+    z-index: 999999;
+}
+.btn-fazer-pedido img {
+    width: 142px;
+    height: 40px;
+}
  .single-produtos img {
     width: 100%;
     height: auto;
@@ -150,6 +160,17 @@ span.busca-por-produto {
     background-color: yellow;
     padding: 0;
 }
+@media(max-width: 991px) {
+.prod-main-img img {
+    height: auto;
+}
+}
+@media(min-width: 992px) {
+.prod-main-img img {
+    height: 210px;
+}
+}
+
 .prod-main-link {
     background-color: #E2A00E;
 }
@@ -448,7 +469,7 @@ color: #E2A00E;
         color: #fff;
           font-weight: bolder;
         padding: 5px 0;
-  
+
     }
     .finalizar-pedido a:hover {
         background: #E2A00E;
@@ -675,13 +696,13 @@ a {
 .como-chegar {
     background: #E2A00E;
     color: #fff;
-   
+
 }
 .box-como-chegar {
     padding: 40px 0;
 }
 .contato-box-full {
-  background: #E2A00E;
+  background: #C38F1B;
 }
 .dropdown-menu {
     left: 130px;
@@ -696,7 +717,7 @@ a {
 }
 
 .como-chegar-texto p{
-    font-size: 19px;
+    font-size: 16px;
     font-family: 'Lato', sans-serif;
 }
 .quantidade-itens-scroll {
@@ -766,3 +787,60 @@ background:#869791
 .owl-nav {
     display: none;
 }
+.form-control  {
+    color: #000;
+}
+
+
+
+
+/*TRABALHE NA SUPORTE*/
+.bg-trabalhe-na-suporte {
+    background: #751C2E;
+    padding: 40px 0;
+    color: #fff;
+}
+.trabalhe-na-suporte-box h3 {
+    text-align: center;
+    color: #FFF;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 20px 0px;
+}
+.trabalhe-na-suporte-box input {
+
+}
+input.inputsclass {
+    width: 100%;
+    border:none;
+    padding: 12px;
+    background: #534D4D;
+    color:#fff;
+}
+input[type="submit"]{
+
+border:1px solid #ffad41; -webkit-border-radius: 3px; -moz-border-radius: 3px;border-radius: 3px;font-size:12px;font-family:arial, helvetica, sans-serif; padding: 10px 30px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+ background-color: #ffc579; background-image: -webkit-gradient(linear, left top, left bottom, from(#ffc579), to(#fb9d23));
+ background-image: -webkit-linear-gradient(top, #ffc579, #fb9d23);
+ background-image: -moz-linear-gradient(top, #ffc579, #fb9d23);
+ background-image: -ms-linear-gradient(top, #ffc579, #fb9d23);
+ background-image: -o-linear-gradient(top, #ffc579, #fb9d23);
+ background-image: linear-gradient(to bottom, #ffc579, #fb9d23);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffc579, endColorstr=#fb9d23);
+}
+input[type="submit"]:hover{
+ border:1px solid #ff9913;
+ background-color: #ffaf46; background-image: -webkit-gradient(linear, left top, left bottom, from(#ffaf46), to(#e78404));
+ background-image: -webkit-linear-gradient(top, #ffaf46, #e78404);
+ background-image: -moz-linear-gradient(top, #ffaf46, #e78404);
+ background-image: -ms-linear-gradient(top, #ffaf46, #e78404);
+ background-image: -o-linear-gradient(top, #ffaf46, #e78404);
+ background-image: linear-gradient(to bottom, #ffaf46, #e78404);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#ffaf46, endColorstr=#e78404);
+}
+.upload {
+
+}
+input[type="file"]{
+   /* opacity: -.1;
+    height: 50px;*/
+}
+

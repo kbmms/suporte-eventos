@@ -36,6 +36,5 @@ data.telefone = document.getElementById("telefone").value;
 data.comments = document.getElementById("comments").value;
 data.celular = document.getElementById("celular").value;
 data.cidade = document.getElementById("cidade").value;
-data.estado = document.getElementById("estado").value;
 data.data = document.getElementById("data").value;
 });

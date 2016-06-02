@@ -8,10 +8,12 @@
       <h1 class="page-title"><?php printf( __( 'Resultados por: %s', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
     </header><!-- .page-header -->
 
-    <div class="container">          
+    <div class="container">
       <div class="col-md-10 col-md-offset-1">
-        <?php /* Start the Loop */ ?>
-        <?php while ( have_posts() ) : the_post(); ?>
+      <div class="row">
+      <?php $i = 0; ?>
+      <?php while ( have_posts() ) : the_post(); ?>
+      <?php $i++; ?>
         <div class="simpleCart_shelfItem col-md-6 col-sm-6 col-xs-8 col-xs-offset-2 produtos-box">
           <div class="imagem-produto">
             <a href="<?php the_permalink() ?>"class="item_thumb"><?php the_post_thumbnail(); ?></a>
@@ -23,10 +25,13 @@
             <p class="pull-right"> <a class="ver-evento" href="<?php the_permalink(); ?>">VEJA NO EVENTO</a></p>
           </div>
         </div>
-
+              <?php if ($i == 2) {
+                  echo '</div><div class="row">';
+                  $i = 0;
+              } ?>
 
         <?php endwhile; ?>
-
+</div>
 
 
         <?php else : ?>
@@ -34,10 +39,10 @@
         <br>
         <p><img src="http://suporteventos.com.br/wp-content/uploads/2016/05/logo-topo-1.png" alt=""></p>
         <h1>Desculpe, não econtrados nada com o termo inserido.</h1>
-        <p><a href="http://suporteventos.com.br">Voltar para home</a></p>  
+        <p><a href="http://suporteventos.com.br">Voltar para home</a></p>
         <br>
         </div>
-        
+
 
         <?php endif; ?>
       </div>

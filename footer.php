@@ -1,41 +1,11 @@
-<div class="row contato-box-full">
-  <div class="container" id="comochegar">
-    <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 box-como-chegar">
-      <?php query_posts('category_name=contato&orderby=title&order=ASC' ); ?>
-        <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-          <div class="col-md-12 col-md-offset-0  col-sm-12 col-xs-12 text-center como-chegar-texto">
-            <!--  <h2><?php the_title() ?></h2> -->
-            <?php the_content(); ?>
-          </div>
-          <?php endwhile; else: ?>
-            <?php endif; ?>
-              <?php wp_reset_postdata();
-  ?>
-    </div>
-  </div>
-</div>
 
 
-<div class="como-chegar">
-  <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/mapa_Como_Chegar.jpg" class="img-responsive" alt="">
-</div>
+
+
 
 
 <footer>
-  <div class="row newsletter">
-    <div class="container-fluid">
-      <div class="text-center col-md-4 col-md-offset-4">
-        <h3>Inscreva-se em nossa newsletter</h3>
-        <p>Informe seu nome e e-mail abaixo e receba novidades, produtos e ofertas.</p>
-        <p>
-          <input type="text" class="form-control" placeholder="nome">
-          <br>
-          <input type="text" class="form-control" placeholder="E-mail">
-          <br>
-          <button class="btn btn-primary">OK</button>
-        </p>
-      </div>
-    </div>
+
     <div class="row">
       <div class="container-fluid copyright-fluid">
         <div class="copyright container text-center">
@@ -63,6 +33,10 @@
 
 <script type="text/javascript">
   $(document).ready(function () {
+    $('.enviado-com-sucesso a').click(function(){
+              $('a:first-child').html('<a href="http://www.suporteventos.com.br">Voltar</a>');
+            });
+
     $('.imagem-produto img').addClass("item_thumb");
     $('.imagem-produto-single img').addClass("item_thumb");
     // Scroll the whole document
@@ -76,6 +50,26 @@
     //    target:'#small-box-container'
 
     // });
+
+
+  // var imageHeight, wrapperHeight, overlap, container = $('.slider-box');
+
+  //   function centerImage() {
+  //       imageHeight = container.find('img').height();
+  //       wrapperHeight = container.height();
+  //       overlap = (wrapperHeight - imageHeight) / 2;
+  //       container.find('img').css('margin-top', overlap);
+  //   }
+
+  //   $(window).on("load resize", centerImage);
+
+  //   var el = document.getElementById('wrapper');
+  //   if (el.addEventListener) {
+  //       el.addEventListener("webkitTransitionEnd", centerImage, false); // Webkit event
+  //       el.addEventListener("transitionend", centerImage, false); // FF event
+  //       el.addEventListener("oTransitionEnd", centerImage, false); // Opera event
+  //   }
+
   });
   simpleCart.bind('beforeCheckout', function (data) {
     data.nome = document.getElementById("nome").value;
@@ -85,7 +79,6 @@
     data.comments = document.getElementById("comments").value;
     data.celular = document.getElementById("celular").value;
     data.cidade = document.getElementById("cidade").value;
-    data.estado = document.getElementById("estado").value;
     data.data = document.getElementById("data").value;
 
   });

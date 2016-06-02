@@ -7,6 +7,8 @@
         // TAMANHO SLIDER PRINCIPAL
         add_image_size('itens-principal', 277, 184, true);
         }
+        // add_image_size( 'img-slider', 2000, 0, array( 'center', 'center' ));
+
 /**
  * Adicionamos uma acção no inicio do carregamento do WordPress
  * através da função add_action( 'init' )
